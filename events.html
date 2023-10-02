@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tanken</title>
+
+    <!-- FONTS -->
+    <link rel="stylesheet" href="https://use.typekit.net/iib5ftc.css">
+
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <!--JAVASCRIPT -->
+    <script src="script.js" defer></script>
+
+     <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/69e662559e.js" crossorigin="anonymous"></script>
+
+    
+
+    
+
+</head>
+
+<body>
+<!-- ØL SPIL -->
+    <div id="modalContainer">
+        <button id="hoverbox"><img src="images/arrowright.svg" alt="#"></button>
+        <button id="modalButton">For mange muligheder? <br> - Tryk her og lad Tanken vælge din næste øl!</button>
+            <div id="myModal" class="modal">
+            
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h1>Brug for hjælp til at vælge?</h1>
+                    <h2>Hvis du går med tanken om at prøve noget nyt,
+                        så lad os vælge din næste øl for dig! <br> </h2>
+                    <p> Alt du skal gøre, er at trykke på knappen nedenunder,<br>
+                        så finder vi en øl til dit næste besøg på TANKEN </p>
+                    <button id="btnBeer" class="cta_font">INSPIRER MIG</button>
+                    <h2 id="yourBeer"></p>
+                </div>
+            </div>
+    </div>
+
+<!-- LINK TIL TOP -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">TIL TOP</button>
+
+<!-- HEADER -->
+    <header>
+        <section class="mobile_hidden">
+            <a href="index.html"><img class="max_img" src="images/orange_logo.png" alt="Forside Logo"></a>    
+            <nav>
+                <a href="om.html"> Om os</a>
+                <a href="menukort.html"> Menukort </a>
+                <a href="events.html"> Events </a>
+            </nav> 
+        </section>
+    </header>
+
+    <section class="laptop_hidden">
+        <div class="flexcontainer_row space_between">
+            <div class="sidenav_logo">
+                <a href="index.html"><img class="max_img" src="images/orange_logo.png" alt="Forside Logo"></a>   
+            </div>
+            <div><span onclick="openNav()"><i class="fa-solid fa-bars"></i></span></div>
+            </div>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="index.html"> Forside </a>
+                <a href="om.html"> Om os</a>
+                <a href="menukort.html"> Menukort </a>
+                <a href="events.html"> Events </a>
+            </div>
+    </section>
+
+<!-- MAIN -->
+<main>
+    
+<!-- DENNE UGE -->
+    <section class="line_container">
+        <div class="lines mobile_hidden" id="lines_event"></div>
+        <h1 class="black_headlines lines_responsive" id="overskrift_denneuge"> Denne uge </h1>
+        <div class="openclosed" id="openclosed_event">      
+            <p id="openNow">Åben nu</p>
+            <p id="closed">Åbner i morgen kl. 09:00</p>  
+        </div>  
+        <div class="flexcontainer_row center" id="denneuge">
+            <div>
+                <h2> Fars dag 5. Juni </h2>
+                <p class="p_size">
+                    Fars dag lurer lige om hjørnet og det kalder på en fejring 
+                    af alle de skønne fædre vi har. <br>
+                    Ham som lapper din cykel når den igen er flad, ham dem der 
+                    hjælper dig med at flytte for 5. gang i år, og ham som lige 
+                    svinger forbi med en kasse pepsi sidst på måneden. <br> 
+                    <br>    
+                    Alle dem vil vi på Tanken gerne være med til at fejre, 
+                    så derfor har vi lavet en skarp pris til din far og dig på 
+                    Fars dag d. 5 juni hvor du kan få 2 kopper kaffe, 2  boller 
+                    med ost og 2 morgenkager til kun 130,- <br>
+                    Så tag din kære far i hånden og kom ned til os på Tanken til 
+                    en skøn og rolig morgen. 
+                    <br>
+                    <br>
+                    Huske vi også serverer en masse andre spændende mad og drikkevarer.
+                    Tag et kig på menukortet, for at læse nærmere.   
+                </p>
+                <button class="cta_button bluebutton cta_font" id="events_button" onclick=" window.open('menukort.html','_self')"> Om os </button>
+
+            </div>  
+            <div class="mobile_hidden">
+                <img class="max_img" src="images/farsdag.jpg" alt="Fars dag billede">
+            </div>
+        </div>
+        <div class="laptop_hidden mobile_image">
+            <img class="max_img" src="images/farsdag.jpg" alt="Fars dag billede">
+        </div>
+    </section>
+
+<!-- KOMMENDE EVENTS -->
+    <section>
+        <div class="blue_box" id="events">
+                <h1 id="overskrift_kommendeevents">KOMMENDE EVENTS</h1>
+            <div class="flexcontainer_row" id="kommendeevents">  
+            <div >
+                <h2> ØLSMAGNING <br> 27/06 </h2>
+                <p class="p_size">
+                    På Tanken har vi en bredt <br>
+                    udvalg af øl. Til ølsmagning<br>
+                    har du muligheden for at smage<br>
+                    på sagerne. <br> <br>
+                    Vi guider dig igennem alt fra  <br>
+                    IPA til Brown Ale, og sikrer <br>
+                    noget til enhver smag. <br> <br>
+                    Arrangementet koster 189,- <br>
+                    pr. person.
+                    
+                </p>
+            </div>  
+            <div>
+                <h2> VINSMAGNING <br> 05/07 </h2>
+                <p class="p_size">
+                    Tænker du at udforske dine vin <br>
+                    connoisseur evner, så <br>
+                    kig forbi tanken til vinsmagning. <br><br>
+                    Vi guider dig igennem forskellige <br>
+                    nøje udvalgte vine, og du kan glæde <br> 
+                    dig til smagen af alt fra Argentina <br>
+                    til New Zealand. <br> <br>
+                    Arrangementet koster 200,- <br>
+                    pr. person. <br> 
+                      
+                </p>
+            </div>  
+            <div>
+                <h2> QUIZAFTEN <br> 15/07 </h2>
+                <p class="p_size">
+                    Skal du være med til vores <br>
+                    første quiz-aften? <br>
+                    Kom forbi til en smadder hyggelig <br>
+                    aften, i selskab med os fra TANKEN <br>
+                    og nye venner. <br> <br>
+                    Arrangementet er helt gratis. <br>
+                    Vi disker endda op med <br> 
+                    sjove og hyggelige præmier, <br>
+                    til de heldige vindere.  
+                </p>
+            </div> 
+        </div> 
+    </div>
+    </section>
+
+<!-- EVENTS BILLEDER -->
+    <section class="line_container">
+        <div class="mobile_hidden" ></div>
+            <div class="double_lines mobile_hidden" id="double_lines_omos"></div>
+                <div class="flexcontainer_row two_pics" id="events_img">
+                    <div class="mobile_hidden"><img class="max_img" src="images/event1.jpg" alt="Event billede 1"></div>
+                    <div class="mobile_hidden"><img class="max_img" src="images/event2.jpg" alt="Event billede 2"></div>
+                </div>    
+                <div class=" mobile_image"><img class="laptop_hidden max_img " src="images/event1.jpg" alt="Event billede 1"></div>
+    </section>
+
+ <!-- FOOTER -->
+ <footer class="flexcontainer_row blue_box">
+    <div>
+        
+        <h1 class="italic"> 
+            MAN - TOR: 09:00 - 22:00 <br>
+            FRE - SØN: 09:00 - SENT    
+        </h1>
+        <h1><a href="https://www.google.com/maps/place/Tanken/@56.1588644,10.2074208,17z/data=!3m1!4b1!4m6!3m5!1s0x464c3fed6d8e6675:0xc4b3cf601aec155e!8m2!3d56.1588614!4d10.2099957!16s%2Fg%2F11kc2n7_gd?entry=ttu" target="_blank">Tanken <br> Graven 26 - Aarhus C</a></h1>
+    </div>
+    <div>
+        <img class="max_img" src="images/hvid_logo.png" alt="Forside Logo">
+    </div>
+    <div class="align_right">
+        <a href onclick=" window.open('https://www.instagram.com/tankenigraven/','_blank')"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+        <a href="404.html"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
+        <h2> <a class="italic" href="#">tankenigraven@gmail.com</a></h2>
+    </div>
+</footer>
+
+</main>
+
+
+</body>
+</html>

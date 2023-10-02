@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tanken</title>
+
+    <!-- FONTS -->
+    <link rel="stylesheet" href="https://use.typekit.net/iib5ftc.css">
+
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <!--JAVASCRIPT -->
+    <script src="script.js" defer></script>
+
+    <!--ANIMATIONER-->
+
+
+     <!-- FONTAWESOME -->
+    <script src="https://kit.fontawesome.com/69e662559e.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+
+<body>
+<!-- ØL SPIL -->
+    <div id="modalContainer">
+        <button id="hoverbox"><img src="images/arrowright.svg" alt="#"></button>
+        <button id="modalButton">For mange muligheder? <br> - Tryk her og lad Tanken vælge din næste øl!</button>
+            <div id="myModal" class="modal">
+            
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h1>Brug for hjælp til at vælge?</h1>
+                    <h2>Hvis du går med tanken om at prøve noget nyt,
+                        så lad os vælge din næste øl for dig! <br> </h2>
+                    <p> Alt du skal gøre, er at trykke på knappen nedenunder,<br>
+                        så finder vi en øl til dit næste besøg på TANKEN </p>
+                    <button id="btnBeer" class="cta_font">INSPIRER MIG</button>
+                    <h2 id="yourBeer"></p>
+                </div>
+            </div>
+    </div>
+
+<!-- LINK TIL TOP -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top">TIL TOP</button>
+
+<!-- HEADER -->
+    <header>
+        <section class="mobile_hidden">
+            <a href="index.html"><img class="max_img" src="images/orange_logo.png" alt="Forside Logo"></a>    
+            <nav>
+                <a href="om.html"> Om os</a>
+                <a href="menukort.html"> Menukort </a>
+                <a href="events.html"> Events </a>
+            </nav> 
+        </section>
+    </header>
+
+    <section class="laptop_hidden">
+        <div class="flexcontainer_row space_between">
+            <div class="sidenav_logo">
+                <a href="index.html"><img class="max_img" src="images/orange_logo.png" alt="Forside Logo"></a>   
+            </div>
+            <div><span onclick="openNav()"><i class="fa-solid fa-bars"></i></span></div>
+            </div>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="index.html"> Forside </a>
+                <a href="om.html"> Om os</a>
+                <a href="menukort.html"> Menukort </a>
+                <a href="events.html"> Events </a>
+            </div>
+    </section>
+
+<!-- MAIN -->
+<main>
+
+<!-- VIDEOSEKTION -->
+    <section class="flexcontainer_row center" id="videosection">
+            <div class="openclosed" id="openclosed_omos">
+                <p id="openNow">Åben nu</p>
+                <p id="closed">Åbner i morgen kl. 09:00</p>
+            </div>
+        <div class="container_overlap"  id="videocontainer">
+            <div class="blue_box">
+                <h1>KOM PÅ <br> BESØG<br>HOS OS</h1>
+                <br>
+                <br>
+                <h2>Hvad er Tanken?</h2>
+                <br>
+                <p class="p_size">Tanken er en kiosk beliggende i Aarhus hyggelige gade Graven. Kiosken drives og ejes af fire venner: Tobias Knudsen, Morten Teglbrænder, Frederik Willems og Mathias Gjerka. 
+                <br>
+                <br>
+                    Mandag den 1. maj 2023 afholdte Tanken åbningsdag, og er derfor et helt nyt koncept i hjertet af byen. Med inspiration fra mindre private kiosker i Berlin, har de stablet virksomheden på benene om samme tanke. 
+                <br>
+                <br>
+                    Om morgenen kan man få serveret boller og kaffe, og om aftenen skifter kiosken scene og serverer kolde fadøl hen over baren. Tanken er derfor et heldagskoncept, til et hvert humør.
+                </p>
+            </div>
+            <div class="mobile_hidden" id="video_laptop">
+                <video autoplay loop muted>
+                    <source src="images/tankenvideo.mp4">
+                </video>
+            </div>
+            <div class="laptop_hidden" id="video_mobile">
+                <video autoplay loop muted>
+                    <source src="images/tankenvideo.mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+
+
+
+<!-- MERCH SEKTION -->
+    <section  class ="merchsection">
+        <div class="line_container">
+            <h1 class="align_right black_headlines lines_responsive" id="overskrift_merch">MERCH</h1>
+
+<!-- T-SHIRT -->
+            <div id="lines_omos" class="lines mobile_hidden"></div>  
+            <div class="center flexcontainer_row align_right" id="tshirtcontainer">
+                <div class="omos_sticker" id="sticker_tshirt">
+                    <img class="max_img mobile_hidden" src="images/sticker.tshirt.png"  alt="sticker tshirt">
+                    <img class="max_img laptop_hidden" src="images/sticker.tshirt.png"  alt="sticker tshirt">
+                </div>
+                <div id="text_tshirt">
+                    <h2 class="italic">BLIV EN DEL AF TANKEN</h2>
+                    <h3>KØB VORES TANK-TOP</h3> <br>
+                    <p class="align_right p_size">
+                        Nu kan du købe din helt egen Tanken t-shirt. Ved at købe <br>
+                        en t-shirt støtter du Tanken, og hjælper med at sprede ordet. <br>
+                        Den kan fås i størrelserne XS til XL, og i farverne hvid, beige og grå.
+                    </p>
+                    <br>
+                    <p class="p_size">Læs om vores merch og meget mere på vores <a href onclick=" window.open('https://www.instagram.com/tankenigraven/','_blank')"><span>INSTAGRAM</span></a></p> 
+                </div>
+            </div>
+         
+<!-- T-shirt billeder-->
+                <p id="størrelser"> STR. XS - XL </p>
+                <div class="three_img flexcontainer_row">
+                    
+                    <div><img class="max_img mobile_hidden" src="images/tshirt1.jpg" alt="T-shirt 1"></div>
+                    <div><img class="max_img mobile_hidden" src="images/tshirt2.jpg" alt="T-shirt 2"></div>
+                    <div><img class="max_img mobile_hidden" src="images/tshirt3.jpg" alt="T-shirt 3"></div>
+                </div> 
+                <div class="mobile_image"><img class="max_img laptop_hidden" src="images/tshirt2.jpg" alt="T-shirt 2"></div>
+        </div>
+
+<!-- MULEPOSE -->
+        <div  id="totebagcontainer">
+            <div class="omos_sticker" id="sticker_totebag">
+                <img class="max_img mobile_hidden" src="images/sticker.mulepose.png"  alt="stickermulepose">
+                <img class="max_img laptop_hidden" src="images/sticker.mulepose.png"  alt="stickermulepose">
+            </div>
+            <div>
+                <h2 class="italic">TANK OP</h2>
+                <h3>I VORES MULEPOSE</h3> <br>
+                <p class="p_size">
+                    Nu kan du også købe din helt egen Tanken mulepose. Ved at købe <br>
+                    en mulepose støtter du Tanken, og hjælper med at sprede ordet. <br>
+                    Muleposen er perfekt til at tanke op i. <br>
+                </p>
+                <br>
+                <p class="p_size">Læs om vores merch og meget mere på vores <a href onclick=" window.open('https://www.instagram.com/tankenigraven/','_blank')"><span>INSTAGRAM</span></a></p> 
+            </div>  
+            
+        </div>
+
+<!-- Mulepose billeder-->
+        <div class="line_container">
+            <div class="double_lines mobile_hidden" id="double_lines_omos"></div>
+                <div class="three_img flexcontainer_row">
+                    <div><img class="max_img mobile_hidden" src="images/mulepose1.jpg" alt="#"></div>
+                    <div><img class="max_img mobile_hidden" src="images/mulepose2.jpg" alt="#"></div>
+                    <div><img class="max_img mobile_hidden" src="images/mulepose3.jpg" alt="#"></div>
+                </div>
+                <div class="mobile_image"><img class="max_img laptop_hidden" src="images/mulepose3.jpg" alt="#"></div>
+            </div>
+    </section>
+
+  <!-- FOOTER -->
+  <footer class="flexcontainer_row blue_box">
+    <div>
+        
+        <h1 class="italic"> 
+            MAN - TOR: 09:00 - 22:00 <br>
+            FRE - SØN: 09:00 - SENT    
+        </h1>
+        <h1><a href="https://www.google.com/maps/place/Tanken/@56.1588644,10.2074208,17z/data=!3m1!4b1!4m6!3m5!1s0x464c3fed6d8e6675:0xc4b3cf601aec155e!8m2!3d56.1588614!4d10.2099957!16s%2Fg%2F11kc2n7_gd?entry=ttu" target="_blank">Tanken <br> Graven 26 - Aarhus C</a></h1>
+    </div>
+    <div>
+        <img class="max_img" src="images/hvid_logo.png" alt="Forside Logo">
+    </div>
+    <div class="align_right">
+        <a href onclick=" window.open('https://www.instagram.com/tankenigraven/','_blank')"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
+        <a href="404.html"><i class="fa-brands fa-facebook" style="color: #ffffff;"></i></a>
+        <h2> <a class="italic" href="#">tankenigraven@gmail.com</a></h2>
+    </div>
+</footer>
+
+</main>      
+</body>
+</html>
